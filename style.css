@@ -1,0 +1,1831 @@
+/*=====================================
+            RESET
+======================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Vazirmatn",sans-serif;
+
+    direction:rtl;
+
+    background:#010A1D ;
+
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+}
+
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+ul{
+
+    list-style:none;
+
+}
+
+
+
+/*=====================================
+            CONTAINER
+======================================*/
+
+
+.container{
+
+    width:94%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+}
+
+
+
+/*=====================================
+            HEADER
+======================================*/
+
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    width:100%;
+
+    z-index:9999;
+
+
+    background:
+        rgba(8,12,24,.78);
+
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+
+.header .container{
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap: 4vw;
+
+}
+
+
+
+/*=====================================
+            LOGO
+======================================*/
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+.logo img{
+
+    height:150px;
+
+    width:auto;
+
+}
+
+
+
+/*=====================================
+            NAVIGATION
+======================================*/
+
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+
+
+.nav-btn{
+
+    height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    padding:0 14px;
+
+
+    border-radius:12px;
+
+
+    color:#C7D2FE;
+
+
+    font-size:16px;
+
+    font-weight:500;
+
+
+    transition:.35s ease;
+
+}
+
+
+.nav-btn:hover{
+
+
+    color:#fff;
+
+
+    background:
+
+        rgba(109,91,255,.15);
+
+
+}
+
+
+
+
+/*=====================================
+            ACTIONS
+======================================*/
+
+
+.actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+/*=====================================
+            ICON BUTTON
+======================================*/
+
+
+.icon-btn{
+
+
+    width:42px;
+
+    height:42px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    border-radius:40%;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+
+    background:#11172A;
+
+
+    color:#D8DEFF;
+
+
+    cursor:pointer;
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.icon-btn:hover{
+
+
+    background:#6D5BFF;
+
+
+    color:#fff;
+
+
+    transform:translateY(-2px);
+
+
+    box-shadow:
+
+    0 10px 25px rgba(109,91,255,.25);
+
+
+}
+
+
+.theme-toggle{
+    --size:22px;
+
+    appearance:none;
+    -webkit-appearance:none;
+
+    width:var(--size);
+    height:var(--size);
+
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:50%;
+
+    color:#ffffff;
+
+    background:transparent;
+
+    box-shadow:
+        inset calc(var(--size)*0.33)
+        calc(var(--size)*-0.25)
+        0;
+
+    transition:
+        transform .45s,
+        box-shadow .45s,
+        color .45s;
+}
+
+.theme-toggle:checked{
+
+    --ray-size:calc(var(--size)*-0.38);
+    --offset-orthogonal:calc(var(--size)*0.65);
+    --offset-diagonal:calc(var(--size)*0.46);
+
+    transform:scale(.78);
+
+    color:#d6d6d6;
+
+    box-shadow:
+
+        inset 0 0 0 var(--size),
+
+        calc(var(--offset-orthogonal)*-1) 0 0 var(--ray-size),
+
+        var(--offset-orthogonal) 0 0 var(--ray-size),
+
+        0 calc(var(--offset-orthogonal)*-1) 0 var(--ray-size),
+
+        0 var(--offset-orthogonal) 0 var(--ray-size),
+
+        calc(var(--offset-diagonal)*-1)
+        calc(var(--offset-diagonal)*-1)
+        0 var(--ray-size),
+
+        var(--offset-diagonal)
+        var(--offset-diagonal)
+        0 var(--ray-size),
+
+        calc(var(--offset-diagonal)*-1)
+        var(--offset-diagonal)
+        0 var(--ray-size),
+
+        var(--offset-diagonal)
+        calc(var(--offset-diagonal)*-1)
+        0 var(--ray-size);
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.theme-toggle{
+
+    --size:24px;
+
+}
+
+}
+
+/*=====================================
+            THEME BUTTON
+======================================*/
+
+
+.theme-btn i{
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+/*=====================================
+            LOGIN BUTTON
+======================================*/
+
+
+.login-btn{
+
+
+    height:36px;
+
+
+    padding:0 16px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    border-radius:12px;
+
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #4F7DFF,
+        #7B5BFF
+    );
+
+
+
+    color:#fff;
+
+
+    font-size:14px;
+
+
+    font-weight:600;
+
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.login-btn:hover{
+
+
+    transform:translateY(-2px);
+
+
+
+    box-shadow:
+
+    0 15px 35px rgba(109,91,255,.35);
+
+
+}
+
+
+
+
+/*=====================================
+            MOBILE BUTTON
+======================================*/
+
+
+.menu-btn{
+
+
+    display:none;
+
+
+    width:34px;
+
+    height:34px;
+
+
+
+    border:none;
+
+
+    border-radius:50%;
+
+
+
+    background:#11172A;
+
+
+    color:#fff;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.menu-btn:hover{
+
+
+    background:#6D5BFF;
+
+
+}
+
+
+
+
+/*=====================================
+            MOBILE MENU
+======================================*/
+
+
+.mobile-menu{
+
+
+    position:fixed;
+
+
+
+    top:84px;
+
+
+    right:-300px;
+
+
+
+    width:270px;
+
+
+    height:calc(100vh - 84px);
+
+
+
+    background:#101627;
+
+
+
+    border-left:
+
+    1px solid rgba(255,255,255,.06);
+
+
+
+    padding:25px;
+
+
+
+    transition:.35s ease;
+
+
+
+    z-index:999;
+
+
+
+    box-shadow:
+
+    -15px 0 40px rgba(0,0,0,.35);
+
+
+}
+
+
+
+.mobile-menu.active{
+
+
+    right:0;
+
+
+}
+
+
+
+.mobile-menu ul{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+.mobile-menu a{
+
+
+    color:#D7DEFF;
+
+
+    font-size:15px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.mobile-menu a:hover{
+
+
+    color:#7D74FF;
+
+
+}
+
+
+
+
+/*=====================================
+            RESPONSIVE
+======================================*/
+
+
+@media(max-width:1100px){
+
+
+    .nav-links{
+
+
+        display:none;
+
+
+    }
+
+
+
+    .menu-btn{
+
+
+        display:flex;
+
+
+        align-items:center;
+
+
+        justify-content:center;
+
+
+    }
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+    .header .container{
+
+
+        height:70px;
+
+
+    }
+
+
+
+    .logo img{
+
+
+        height:38px;
+
+
+    }
+
+
+
+    .login-btn{
+
+
+        padding:0 16px;
+
+
+        font-size:13px;
+
+
+    }
+
+
+
+    .icon-btn,
+    .menu-btn{
+
+
+        width:38px;
+
+
+        height:38px;
+
+
+    }
+
+
+
+    .mobile-menu{
+
+
+        top:70px;
+
+
+        height:calc(100vh - 70px);
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+    .container{
+
+
+        width:96%;
+
+
+    }
+
+
+
+    .login-btn{
+
+
+        display:none;
+
+
+    }
+
+
+
+    .actions{
+
+
+        gap:8px;
+
+
+    }
+
+
+
+    .logo img{
+
+
+        height:34px;
+
+
+    }
+
+
+}
+/* ============================================================== */
+/*==========================
+        HERO
+==========================*/
+
+.hero{
+    width:100%;
+    min-height: 60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 45px 4%;
+    overflow:hidden;
+    position:relative;
+}
+
+.hero-content,
+.hero-image{
+    width:50%;
+}
+
+/*==========================
+      CONTENT
+==========================*/
+
+.hero-content{
+
+    direction:rtl;
+    text-align:right;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+}
+
+.hero-content h1{
+
+    font-size: 45px;
+    font-weight:800;
+    line-height:1.6;
+    color:#fff;
+    margin-bottom:25px;
+
+}
+
+.hero-content h1 span{
+
+    color:#5B8EFF;
+
+}
+
+.hero-content p{
+
+    font-size:18px;
+    line-height:2;
+    color:#B7BED4;
+    max-width:520px;
+    margin-bottom:40px;
+
+}
+
+/*==========================
+        BUTTONS
+==========================*/
+
+.hero-buttons{
+
+    display:flex;
+    gap:18px;
+
+}
+
+.btn{
+
+    width:220px;
+    height:55px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(90deg,#4F8CFF,#835BFF);
+    color:#fff;
+
+}
+
+.btn-secondary{
+
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.04);
+    color:#fff;
+
+}
+
+/*==========================
+      HERO IMAGE
+==========================*/
+
+.hero-image{
+
+    position:relative;
+
+    width:700px;
+    height:400px;
+
+}
+
+/*==========================
+      GLOW
+==========================*/
+
+.hero-glow{
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(92,84,255,.45) 0%,
+    rgba(92,84,255,.20) 40%,
+    rgba(92,84,255,.05) 70%,
+    transparent 100%);
+
+    filter:blur(90px);
+
+    z-index:1;
+
+}
+
+/*==========================
+      ALL IMAGES
+==========================*/
+
+.hero-image img{
+
+    position:absolute;
+
+    display:block;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+/*==========================
+      LAYERS
+==========================*/
+
+
+/* کدهای Hero */
+
+/* ==========================
+      ANIMATIONS
+========================== */
+
+/* اینجا Keyframes ها قرار می‌گیرند */
+
+@keyframes floatUp{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes floatDown{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(15px);
+    }
+}
+
+@keyframes floatLeft{
+    0%,100%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(-12px,-10px);
+    }
+}
+
+@keyframes floatRight{
+    0%,100%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(12px,10px);
+    }
+}
+
+/* ==========================
+      HERO OBJECTS
+========================== */
+/* مخفی کردن تصاویر Hero در موبایل */
+@media (max-width: 1100px) {
+    .hero-image {
+        display: none;
+    }
+}
+/* =============================================================== */
+.hero-scene img{
+    position:absolute;
+    display:block;
+    user-select:none;
+    pointer-events:none;
+}
+
+/* ---------- Ground ---------- */
+
+.ground{
+    width:500px;
+    left:100px;
+    bottom:0;
+    z-index:2;
+}
+
+/* ---------- Laptop ---------- */
+
+.laptop{
+    width:540px;
+    left: 10px;
+    top:60px;
+    z-index:5;
+}
+
+/* ---------- Bars ---------- */
+
+.bars{
+    width:130px;
+    right:40px;
+    bottom:120px;
+    z-index:3;
+}
+
+/* ---------- Graph ---------- */
+
+.graph{
+    width:120px;
+    right: 240px;
+    top:220px;
+    z-index:11;
+
+    animation:floatDown 5s ease-in-out infinite;
+}
+
+/* ---------- Python ---------- */
+
+.python{
+    width:160px;
+    left: -10px;
+    top:50px;
+    z-index:8;
+
+    animation:floatUp 4s ease-in-out infinite;
+}
+
+/* ---------- Code ---------- */
+
+.code{
+    width:160px;
+    left:-11px;
+    top:180px;
+    z-index:7;
+
+    animation:floatDown 5s ease-in-out infinite;
+}
+
+/* ---------- Formula ---------- */
+
+.formula{
+    width:310px;
+    right: 30px;
+    top:110px;
+    z-index:6;
+
+    animation:floatRight 7s ease-in-out infinite;
+    
+}
+
+/* ---------- Dots ---------- */
+
+.dots{
+    width:120px;
+    right:px;
+    top:150px;
+    z-index:9;
+}
+
+.M {
+    width: 140px;
+    right: 120px;
+    top: 55px;
+
+    animation:floatUp 5.5s ease-in-out infinite;
+}
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+.hero{
+
+    flex-direction:column-reverse;
+    text-align:center;
+
+}
+
+.hero-content,
+.hero-image{
+
+    width:100%;
+
+}
+
+.hero-content{
+
+    align-items:center;
+    text-align:center;
+
+}
+
+.hero-content p{
+
+    max-width:100%;
+
+}
+
+.hero-image{
+
+    width:100%;
+    max-width:600px;
+    height:500px;
+
+}
+
+}
+/* ======================================================================================================================================================= */
+/* =========================================================
+   MAIN WORLDS
+========================================================= */
+
+.main-worlds {
+    width: 100%;
+    padding: 10px 4% 40px;
+    position: relative;
+}
+
+.worlds-container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+
+/* =========================================================
+   WORLD CARD
+========================================================= */
+
+.world-card {
+    position: relative;
+
+    min-height: 215px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, .10);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 39, 91, .95),
+            rgba(4, 18, 48, .98)
+        );
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* =========================================================
+   CODING CARD
+========================================================= */
+
+.coding-world {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(4, 51, 111, .95),
+            rgba(3, 21, 54, .98)
+        );
+
+    border-color:
+        rgba(38, 126, 255, .45);
+}
+
+
+/* =========================================================
+   MATH CARD
+========================================================= */
+
+.math-world {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(48, 26, 105, .95),
+            rgba(24, 18, 66, .98)
+        );
+
+    border-color:
+        rgba(142, 75, 255, .40);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.world-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(105, 130, 255, .65);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, .30);
+}
+
+
+/* =========================================================
+   WORLD IMAGE
+========================================================= */
+
+.world-image {
+
+    width: 250px;
+    height: 100%;
+
+    min-height: 215px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+.world-image img {
+
+    width: 90%;
+    max-width: 280px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    position: relative;
+
+    z-index: 2;
+
+    transition:
+        transform .45s ease;
+}
+
+
+/* Image Hover */
+
+.world-card:hover .world-image img {
+
+    transform:
+        scale(1.05)
+        translateY(-4px);
+}
+
+
+/* =========================================================
+   IMAGE GLOW
+========================================================= */
+
+.coding-world .world-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 106, 255, .25);
+
+    filter:
+        blur(60px);
+
+    z-index: 1;
+}
+
+
+.math-world .world-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(142, 68, 255, .30);
+
+    filter:
+        blur(60px);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   WORLD CONTENT
+========================================================= */
+
+.world-content {
+
+    width: 52%;
+
+    padding:
+        28px 30px 28px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.world-icon {
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    margin-bottom: 12px;
+
+    font-size: 25px;
+
+    color: #65A8FF;
+
+    background:
+        rgba(0, 110, 255, .18);
+
+    border:
+        1px solid rgba(45, 137, 255, .45);
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(0, 110, 255, .08);
+}
+
+
+.math-world .world-icon {
+
+    color: #D58CFF;
+
+    background:
+        rgba(150, 65, 255, .18);
+
+    border-color:
+        rgba(170, 82, 255, .40);
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(150, 65, 255, .10);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.world-content h2 {
+
+    margin: 0 0 8px;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+
+    color: #FFFFFF;
+}
+
+
+.coding-world .world-content h2 {
+
+    color: #3D9BFF;
+}
+
+
+.math-world .world-content h2 {
+
+    color: #D38BFF;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.world-content p {
+
+    max-width: 340px;
+
+    margin: 0 0 18px;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color:
+        rgba(220, 227, 245, .75);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.world-btn {
+
+    height: 44px;
+
+    padding:
+        0 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border-radius: 11px;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    border:
+        1px solid rgba(255, 255, 255, .14);
+
+    background:
+        rgba(255, 255, 255, .035);
+
+    transition:
+        .3s ease;
+}
+
+
+.world-btn i {
+
+    font-size: 14px;
+
+    transition:
+        transform .3s ease;
+}
+
+
+/* Coding Button */
+
+.coding-world .world-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #087CFF,
+            #1453D8
+        );
+
+    border-color:
+        transparent;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 105, 255, .25);
+}
+
+
+/* Math Button */
+
+.math-world .world-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7C3AED,
+            #9333EA
+        );
+
+    border-color:
+        transparent;
+
+    box-shadow:
+        0 10px 25px
+        rgba(130, 50, 255, .25);
+}
+
+
+/* Arrow Hover */
+
+.world-btn:hover i {
+
+    transform:
+        translateX(-5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .main-worlds {
+
+        padding:
+            10px 3% 35px;
+    }
+
+
+    .worlds-container {
+
+        gap: 15px;
+    }
+
+
+    .world-card {
+
+        min-height: 200px;
+    }
+
+
+    .world-image {
+
+        min-height: 200px;
+    }
+
+
+    .world-content {
+
+        padding:
+            22px 20px;
+    }
+
+
+    .world-content h2 {
+
+        font-size: 23px;
+    }
+
+
+    .world-content p {
+
+        font-size: 13px;
+    }
+
+
+    .world-icon {
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .main-worlds {
+
+        padding:
+            10px 4% 30px;
+    }
+
+
+    .worlds-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .world-card {
+
+        min-height: 220px;
+    }
+
+
+    .world-image {
+
+        width: 45%;
+
+        min-height: 220px;
+    }
+
+
+    .world-image img {
+
+        width: 100%;
+
+        max-width: 210px;
+    }
+
+
+    .world-content {
+
+        width: 55%;
+
+        padding:
+            22px 15px 22px 10px;
+    }
+
+
+    .world-content h2 {
+
+        font-size: 21px;
+    }
+
+
+    .world-content p {
+
+        font-size: 12px;
+
+        line-height: 1.9;
+
+        margin-bottom: 14px;
+    }
+
+
+    .world-btn {
+
+        height: 40px;
+
+        padding:
+            0 13px;
+
+        font-size: 12px;
+
+        gap: 8px;
+    }
+
+
+    .world-icon {
+
+        width: 46px;
+        height: 46px;
+
+        border-radius: 12px;
+
+        font-size: 20px;
+
+        margin-bottom: 8px;
+    }
+
+}
+
+.math-icon {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .main-worlds {
+
+        padding:
+            5px 3% 25px;
+    }
+
+
+    .world-card {
+
+        min-height: 190px;
+
+        border-radius: 14px;
+    }
+
+
+    .world-image {
+
+        width: 42%;
+
+        min-height: 190px;
+    }
+
+
+    .world-image img {
+
+        max-width: 160px;
+    }
+
+
+    .world-content {
+
+        width: 58%;
+
+        padding:
+            18px 12px 18px 8px;
+    }
+
+
+    .world-content h2 {
+
+        font-size: 18px;
+    }
+
+
+    .world-content p {
+
+        font-size: 11px;
+
+        line-height: 1.8;
+
+        margin-bottom: 10px;
+    }
+
+
+    .world-icon {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 17px;
+
+        border-radius: 10px;
+    }
+
+
+    .world-btn {
+
+        height: 36px;
+
+        padding:
+            0 10px;
+
+        font-size: 10px;
+
+        gap: 6px;
+    }
+
+}
+
+/* =========================================================
+   RIGHT TO LEFT - WORLD CARDS
+========================================================= */
+
+.world-card {
+    direction: rtl;
+}
+
+.world-content {
+    direction: rtl;
+    text-align: right;
+    align-items: flex-start;
+}
+
+.world-content h2,
+.world-content p {
+    text-align: right;
+}
+
+.world-btn {
+    direction: rtl;
+}
+
+/* آیکون فلش در سمت چپ متن
+.world-btn i {
+    order: -1;
+} */
+
+/* تصویر در سمت چپ کارت */
+.world-image {
+    order: 2;
+}
+
+/* محتوا در سمت راست کارت */
+.world-content {
+    order: 1;
+}
